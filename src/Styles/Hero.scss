@@ -51,6 +51,10 @@
 
     h1{
         font-size: 13rem;
+        margin: 0;
+        letter-spacing: -.25rem;
+        font-family: $font-family-primary;
+        font-weight: 600;
     }
 
     p{
