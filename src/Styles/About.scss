@@ -1,0 +1,61 @@
+.about{
+    position: relative;
+    width: 100%;
+    height: auto;
+    &__main{
+        width: 100%;
+        height: 100vh;
+        background-color: $color-snow;
+        display: flex;
+        position: sticky;
+        top: 0;
+    }
+    
+    &__content{
+
+        &-container{
+            flex: 0 0  50%;
+            display: flex;
+            flex-direction: column;
+            align-items: end;
+            justify-content: end;
+            padding: 7.5rem;
+            height: 100vh;
+        }
+
+        &-item{
+            max-width: 70%;
+            text-align: end;
+            line-height: 1.6;
+        }
+    }
+
+    &__image{
+        
+        &-container{
+            flex: 0 0 50%;
+            width: 100%;
+            height: 100vh;
+            overflow: hidden;
+            position: relative;
+            
+            img{
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                object-position: center;
+            }
+        }
+
+        &-overlay{
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background-color: $color-black;
+            opacity: .2;
+            z-index: 1;
+        }
+    }
+}

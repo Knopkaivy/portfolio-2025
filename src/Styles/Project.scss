@@ -1,0 +1,89 @@
+.project{
+    width: 100%;
+    height: 100vh;
+    position: sticky;
+    top: 0;
+
+    &__image-container{
+        width: 100%;
+        height: 100vh;
+        overflow: hidden;
+    }
+
+    &__image-overlay{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: $color-black;
+        opacity: .3;
+        z-index: 1;
+    }
+
+    &__image{
+        width: 100%;
+        height: 100vh;
+        object-fit: cover;
+    }
+
+    &__content-container{
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 100%;
+        height: 100vh;
+        font-size: 2rem;
+        display: flex;
+        justify-content: center;
+        align-items: end;
+        padding-bottom: 25vh;
+        z-index: 2;
+    }
+    
+    &__svg{
+        fill: transparent;
+        stroke-width: 5px;
+        stroke: $color-white;
+        stroke-dasharray: 400 1320;
+        stroke-dashoffset: 660;
+    }
+
+    &__link-container{
+        position: relative;
+        transform: translateY(-50%);
+        width: 80rem;
+        &:hover .project__svg{
+            animation: .75s draw linear forwards;
+        }
+    }
+    
+    &__link{
+        color: $color-white;
+        text-decoration: none;
+        font-size: 4.4rem;
+        text-transform: uppercase;
+        font-weight: 400;
+        line-height: 6rem;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 80rem;
+        text-align: center;
+
+        &:visited{
+            color: $color-white;;
+        }
+    }
+}
+
+@keyframes draw {
+  0% {
+    stroke-dasharray: 400 1320;
+    stroke-dashoffset: -1060;
+  }
+  100% {
+    stroke-dasharray: 1720;
+    stroke-dashoffset: 0;
+  }
+}

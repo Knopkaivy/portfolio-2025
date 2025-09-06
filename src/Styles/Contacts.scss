@@ -1,0 +1,21 @@
+.contacts{
+    width: 100%;
+    height: auto;
+    background-color: $color-white;
+    display: flex;
+    justify-content: center;
+    gap: 20rem;
+    padding: 10rem 2rem;
+    position: relative;
+
+    &__title{
+        flex: 0 0 40%;
+        text-align: end;
+    }
+    
+    &__links-container{
+        flex: 0 0 40%;
+        display: flex;
+        gap: 10rem;
+    }
+}
