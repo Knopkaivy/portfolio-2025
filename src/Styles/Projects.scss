@@ -1,6 +1,7 @@
 .projects{
     width: 100%;
-    height: auto;
+    height: 100vh;
     background-color: $color-white;
     position: relative;
+    overflow: hidden;
 }

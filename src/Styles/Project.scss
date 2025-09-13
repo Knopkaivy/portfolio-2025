@@ -1,8 +1,8 @@
 .project{
     width: 100%;
     height: 100vh;
-    position: sticky;
-    top: 0;
+    position: absolute;
+    inset: 0;
 
     &__image-container{
         width: 100%;
@@ -17,8 +17,7 @@
         width: 100%;
         height: 100%;
         background-color: $color-black;
-        opacity: .3;
-        z-index: 1;
+        opacity: .1;
     }
 
     &__image{
@@ -38,7 +37,6 @@
         justify-content: center;
         align-items: end;
         padding-bottom: 25vh;
-        z-index: 2;
     }
     
     &__svg{
@@ -51,7 +49,6 @@
 
     &__link-container{
         position: relative;
-        transform: translateY(-50%);
         width: 80rem;
         &:hover .project__svg{
             animation: .75s draw linear forwards;
