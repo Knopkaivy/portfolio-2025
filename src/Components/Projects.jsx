@@ -54,9 +54,9 @@ function Projects() {
     return (
 
 
-        <div ref={projectsContainerRef} className="projects" >
+        <section ref={projectsContainerRef} className="projects" >
             {projectList}
-        </div>
+        </section>
       );
 }
 

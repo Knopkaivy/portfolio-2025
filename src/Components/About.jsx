@@ -7,28 +7,19 @@ import '../Styles/About.scss'
 function About() {
     const aboutRef = useRef(null);
     const aboutImgRef = useRef(null);
-    const aboutImgOverlayRef = useRef(null);
     const aboutContentRef = useRef(null);
 
     useLayoutEffect(()=>{
         const ctx = gsap.context(()=>{
-            gsap.from(aboutImgRef.current, {
-                scale: 1.05,
-                scrollTrigger: {
-                    trigger: aboutRef.current,
-                    start: 'top 0%',
-                    end: 'bottom 100%',
-                    scrub: true
-                }
-            });
 
-            gsap.from(aboutImgOverlayRef.current, {
-                opacity: .1,
+            gsap.to(aboutImgRef.current,{
+                scale: .7,
+                transformOrigin: '0% 100%',
                 scrollTrigger: {
                     trigger: aboutRef.current,
                     start: 'top 0%',
                     end: 'bottom 100%',
-                    scrub: true
+                    scrub: 1
                 }
             });
 
@@ -38,26 +29,26 @@ function About() {
                     trigger: aboutRef.current,
                     start: 'top 0%',
                     end: 'bottom 100%',
-                    scrub: true
+                    scrub: 1
                 }
             });
         }, aboutRef);
         return () => ctx.revert();
     }, []);
     return ( 
-        <div ref={aboutRef} className="about" >
+        <section ref={aboutRef} className="about" >
             <div className="about__main">
                 <div ref={aboutContentRef} className="about__content-container">
                     <p className="about__content-item red increased">I build with intention.</p>
                     <p className="about__content-item">Guided by minimalism and global perspective, I believe, the best design speaks quietly. Beyond the code, I bring clarity, empathy, and a sharp eye for what feels right. I navigate complexity with calm, collaborate with care, and never lose sight of the human on the other side of the screen.</p>
                 </div>
-                <div className="about__image-container">
-                    <div ref={aboutImgOverlayRef} className="about__image-overlay"></div>
-                    <img ref={aboutImgRef} src={DeveloperImage} alt="developer portrait" />
+                <div ref={aboutImgRef} className="about__image-container">
+                    <div className="about__image-overlay"></div>
+                    <img src={DeveloperImage} alt="developer portrait" />
                 </div>
             </div>
             <Contacts/>
-        </div>
+        </section>
      );
 }
 

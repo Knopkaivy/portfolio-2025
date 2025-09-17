@@ -26,7 +26,6 @@ function App() {
     <>
       <ReactLenis root options={{ autoRaf: false }} ref={lenisRef} />
       <Hero/>
-      {/* <Contacts/> */}
       <Projects/>
       <SeeMore/>
       <About/>

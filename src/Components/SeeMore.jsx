@@ -34,17 +34,15 @@ function SeeMore() {
     }, [])
 
     return ( 
-        <>
-            <div ref={seeMoreRef} className="see-more">
-                <div className="see-more__title red increased">
-                    See more of my work
-                </div>
-                <div className="see-more__links-container">
-                    <a href="https://github.com/Knopkaivy" target="_blank" rel="noreferrer" ref={addToRefs} className="see-more__link link">GitHub</a>
-                    <a href="https://codepen.io/knopkaivy" target="_blank" rel="noreferrer" ref={addToRefs} className="see-more__link link">CodePen</a>
-                </div>
+        <section ref={seeMoreRef} className="see-more">
+            <div className="see-more__title red increased">
+                See more of my work
             </div>
-        </>
+            <div className="see-more__links-container">
+                <a href="https://github.com/Knopkaivy" target="_blank" rel="noreferrer" ref={addToRefs} className="see-more__link link">GitHub</a>
+                <a href="https://codepen.io/knopkaivy" target="_blank" rel="noreferrer" ref={addToRefs} className="see-more__link link">CodePen</a>
+            </div>
+        </section>
      );
 }
 
