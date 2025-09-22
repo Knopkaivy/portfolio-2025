@@ -1,6 +1,5 @@
 import { useRef, useLayoutEffect } from "react"
 import gsap from "gsap"
-import RedBGImage from '../assets/Images/red.webp'
 import '../Styles/Hero.scss'
 
 function Hero() {
@@ -9,56 +8,31 @@ function Hero() {
     const heroHeadingRef = useRef(null);
     const heroNameRef = useRef(null);
     const heroDescriptionRef = useRef(null);
+
     useLayoutEffect(() => {
-
         let ctx = gsap.context(() =>{
-            gsap.from(heroNameRef.current, {
-                opacity: 0,
-                y: -50,
-                duration: 1,
-                scrollTrigger:{
-                    trigger: heroNameRef.current,
-                    start: 'top 50%',
-                    toggleActions: 'play none none none'
-                }
-            });
 
-            gsap.from(heroHeadingRef.current, {
-                opacity: 0,
-                y: -30,
-                duration: 1.5,
-                delay: .5,
+            gsap.to(heroHeadingRef.current, {
+                y: -100,
                 scrollTrigger:{
-                    trigger: heroHeadingRef.current,
-                    start: 'top 50%',
-                    toggleActions: 'play none none none'
-                }
-            });
-
-            gsap.from(heroDescriptionRef.current, {
-                opacity: 0,
-                y: 50,
-                duration: 1,
-                delay: 1,
-                scrollTrigger:{
-                    trigger: heroDescriptionRef.current,
-                    start: 'top 80%',
-                    toggleActions: 'play none none none'
+                    trigger: heroRef.current,
+                    start: 'top 0%',
+                    end: 'bottom 0%',
+                    scrub: true,
                 }
             });
 
             const tl = gsap.timeline({     
                 scrollTrigger: {
-                    trigger: heroHeadingRef.current,
-                    start: "top 40%",
-                    end: 'bottom 10%',
-                    scrub: true
+                    trigger: heroRef.current,
+                    start: "top 10%",
+                    toggleActions: 'play none none none'
                 },
             },);
 
-            tl.to(heroImgRef.current, {scale: 1.2})
-                .to(heroHeadingRef.current, {y: -60}, '<')
-                .to(heroNameRef.current, {y: -30}, '<');
+            tl.from(heroNameRef.current, {opacity: 0, y: -50, duration: 2})
+                .from(heroDescriptionRef.current, {opacity: 0, y: 50, duration: 2}, '-=1')
+                .from(heroHeadingRef.current, {y: 250, duration: 2}, '-=1');
 
         }, heroRef);
         return () => ctx.revert();
@@ -67,14 +41,13 @@ function Hero() {
     return (  
         <>
         <section ref={heroRef} className='hero'>
-            <div className="hero__bg-image-container">
-                <img src={RedBGImage} ref={heroImgRef} aria-hidden='true' />
+            <div className="hero__bg-container">
             </div>
             <div className="hero__overlay">
                 <h1 ref={heroHeadingRef}>Front-End Developer</h1>
             </div>
             <div className="hero__overlay--transparent">
-                <div ref={heroNameRef} className='hero__name'>Tanya Ivy</div>
+                <div ref={heroNameRef} className='hero__name'>Tetiana Ivy</div>
                 <div ref={heroDescriptionRef} >
                     <p>I speak <span className='increased' >CSS</span>, dream in <span className='increased'>JavaScript</span>, and build magic with <span className='increased'>ReactJS</span>.</p>
                     <p>Clean code. Sharp edges. Effortless vibes.</p>
