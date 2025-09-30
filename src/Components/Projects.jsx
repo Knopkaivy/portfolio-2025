@@ -23,6 +23,7 @@ function Projects() {
             const tl = gsap.timeline({
                 scrollTrigger:{
                     trigger: projectsContainerRef.current,
+                    ease: "power4.in",
                     start: 'top 0%',
                     end: () => '+=' + window.innerHeight * projectsRef.current.length,
                     scrub: 1,
@@ -54,7 +55,7 @@ function Projects() {
     return (
 
 
-        <section ref={projectsContainerRef} className="projects" >
+        <section ref={projectsContainerRef} id="projects-section" className="projects" >
             {projectList}
         </section>
       );

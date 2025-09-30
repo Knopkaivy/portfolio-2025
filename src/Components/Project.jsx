@@ -20,6 +20,7 @@ const Project = forwardRef(({imgSrc, name, url, ind}, ref) => {
             let ctx = gsap.context(()=>{
                 gsap.from(projectLinkRef.current,{
                     y: 200,
+                    ease: "power4.in",
                     scrollTrigger: {
                         trigger: projectRef.current,
                         start: 'top 50%',
@@ -27,6 +28,7 @@ const Project = forwardRef(({imgSrc, name, url, ind}, ref) => {
                         scrub: 1
                     }
                 });
+
                 gsap.to(projectImageOverlayRef.current,{
                     opacity: .5,
                     scrollTrigger: {

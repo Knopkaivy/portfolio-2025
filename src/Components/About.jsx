@@ -36,7 +36,7 @@ function About() {
         return () => ctx.revert();
     }, []);
     return ( 
-        <section ref={aboutRef} className="about" >
+        <section ref={aboutRef} id="about-section" className="about" >
             <div className="about__main">
                 <div ref={aboutContentRef} className="about__content-container">
                     <p className="about__content-item red increased">I build with intention.</p>

@@ -1,10 +1,10 @@
 import { useRef, useLayoutEffect } from "react"
 import gsap from "gsap"
 import '../Styles/Hero.scss'
+import NavSection from "./NavSection";
 
 function Hero() {
     const heroRef = useRef(null);
-    const heroImgRef = useRef(null);
     const heroHeadingRef = useRef(null);
     const heroNameRef = useRef(null);
     const heroDescriptionRef = useRef(null);
@@ -40,12 +40,13 @@ function Hero() {
     }, []);
     return (  
         <>
-        <section ref={heroRef} className='hero'>
+        <section ref={heroRef} id="home-section" className='hero'>
             <div className="hero__bg-container">
             </div>
             <div className="hero__overlay">
                 <h1 ref={heroHeadingRef}>Front-End Developer</h1>
             </div>
+            <NavSection/>
             <div className="hero__overlay--transparent">
                 <div ref={heroNameRef} className='hero__name'>Tetiana Ivy</div>
                 <div ref={heroDescriptionRef} >

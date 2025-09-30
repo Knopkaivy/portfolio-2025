@@ -7,7 +7,6 @@ import Hero from './Components/Hero'
 import Projects from './Components/Projects'
 import SeeMore from './Components/SeeMore'
 import About from './Components/About'
-import Contacts from './Components/Contacts'
 gsap.registerPlugin(ScrollTrigger);
 
 function App() {
