@@ -29,6 +29,10 @@ body, #root {
   font-size: 2rem;
 }
 
+body.no-scroll{
+  overflow: hidden;
+}
+
 
 .link{
   text-decoration: none;

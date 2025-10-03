@@ -38,7 +38,7 @@ function Contacts() {
         <section ref={contactsRef} id="contacts-section" className="contacts">
             <div className="contacts__title red increased">Reach out at</div>
             <div className="contacts__links-container">
-                <a href="mailto:knokaivy@gmail.com" ref={addToRefs} className="contacts__link link">Email</a>
+                <a href="mailto:tetianaivy@gmail.com" ref={addToRefs} className="contacts__link link">Email</a>
                 <a href="https://www.linkedin.com/in/tetiana-ivy-213801134/" target="_blank" rel="noreferrer" ref={addToRefs} className="contacts__link link">LinkedIn</a>
                 <a href="https://www.fiverr.com/s/7YBL22L" target="_blank" rel="noreferrer" ref={addToRefs} className="contacts__link link">fiverr.</a>
             </div>

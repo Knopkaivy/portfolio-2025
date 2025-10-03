@@ -7,6 +7,7 @@ import Hero from './Components/Hero'
 import Projects from './Components/Projects'
 import SeeMore from './Components/SeeMore'
 import About from './Components/About'
+import Menu from './Components/Menu'
 gsap.registerPlugin(ScrollTrigger);
 
 function App() {
@@ -24,6 +25,7 @@ function App() {
   return (
     <>
       <ReactLenis root options={{ autoRaf: false }} ref={lenisRef} />
+      <Menu/>
       <Hero/>
       <Projects/>
       <SeeMore/>
