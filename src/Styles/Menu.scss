@@ -10,6 +10,8 @@
     padding-top: 6.5rem;
     padding-right: 10rem;
     z-index: 5;
+                                        color: $color-white;
+            mix-blend-mode: difference;
     
     &__button{
         width: 9rem;
@@ -23,6 +25,7 @@
         display: flex;
         flex-direction: column;
         z-index: 2;
+
 
         &--close{
             position: absolute;
@@ -38,16 +41,17 @@
         flex-direction: column;
         justify-content: space-between;
         align-items: center;
-    }
 
+    }
+    
     &__line{
         position: relative;
         width: 100%;
         height: .4rem;
         overflow: hidden;
-        border-radius: .5rem;
-        
+        border-radius: .4rem;
 
+        
         &-inner{
             position: absolute;
             width: 100%;
@@ -55,7 +59,7 @@
             top: 0;
             left: 50%;
             transform: translateX(-50%);
-            background: linear-gradient(90deg, $color-red 0%, $color-red 40%, transparent 40%, transparent 60%, $color-red 60%, $color-red 100%);
+            background: linear-gradient(90deg, $color-white 0%, $color-white 40%, $color-black 40%, $color-black 60%, $color-white 60%, $color-white 100%);
             background-size: 250%;
             background-position: 100%;
             transition: all .7s ease;
@@ -78,8 +82,8 @@
             width: 65%;
             height: .4rem;
             transform: rotate(45deg);
-            background-color: $color-red;
-            border-radius: .5rem;
+            background-color: $color-black;
+            border-radius: .4rem;
             position: absolute;
             top: -.5rem;
             left: 20%;
@@ -135,6 +139,7 @@
                     width: 0;
                     height: .6rem;
                     background-color: $color-red;
+                    border-radius: .2rem;
                     transition: all .5s .05s ease;
                 }
 
@@ -163,6 +168,7 @@
         padding-bottom: 4rem;
         padding-left: 20rem;
         font-size: 2.4rem;
+
     }
 
     &__iconlist{
@@ -173,12 +179,73 @@
         padding: 0;
     }
 
-    &__icon svg{
-        fill: $color-black;
-        transition: all .2s .05s ease;
+    &__icon{
+        margin: 0;
+        padding: 0;
+        
+        &-link{
+            width: 6.5rem;
+            height: 6.5rem;
+            border-radius: 100%;
+            background-color: $color-pale-silver;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            &::after{
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                background-color: $color-red;
+                width: 100%;
+                height: 100%;
+                border-radius: 100%;
+                z-index: 1;
+                transform: scale(0);
+                transition: all .5s .1s ease;
+            }
+        }
+
+        &:hover &-link::after, &:focus &-link::after, &:active &-link::after{
+            transform: scale(1);
+        }
+
+        & svg{
+            fill: $color-black;
+            transition: all .2s .05s ease-out;
+            z-index: 2;
+        }
+
+        &:hover svg, &:focus svg, &:active svg{
+            fill: $color-white !important;
+        }
     }
 
-    &__icon:hover svg, &__icon:focus svg, &__icon:active svg{
-        fill: $color-red !important;
+    &__link--email{
+        position: relative;
+        color: $color-black;
+        
+        &::after{
+            position: absolute;
+            content: "";
+            bottom: -.2rem;
+            right: 0;
+            background-color: $color-black;
+            width: 100%;
+            height: .2rem;
+            transition: all .5s .05s ease;
+        }
+
+        &:hover, &:focus, &:active{
+            color: $color-black;
+
+            &::after{
+                width: 0;
+            }
+        }
     }
+
+
 }

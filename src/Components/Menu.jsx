@@ -114,17 +114,17 @@ function Menu() {
                         <div className="menu__contacts-icons">
                             <ul className="menu__iconlist">
                                 <li className="menu__icon">
-                                    <a href="https://www.linkedin.com/in/tetiana-ivy-213801134/" target="_blank" rel="noreferrer" ref={addToRefs} className="link"><LinkedInSvg/></a>
+                                    <a href="https://www.linkedin.com/in/tetiana-ivy-213801134/" target="_blank" rel="noreferrer" ref={addToRefs} className="menu__icon-link link"><LinkedInSvg/></a>
                                 </li>
                                 <li className="menu__icon">
-                                    <a href="https://github.com/Knopkaivy" target="_blank" rel="noreferrer" ref={addToRefs} className="link"><GitHubSvg/></a>
+                                    <a href="https://github.com/Knopkaivy" target="_blank" rel="noreferrer" ref={addToRefs} className="menu__icon-link link"><GitHubSvg/></a>
                                 </li>
                                 <li className="menu__icon">
-                                    <a href="https://www.fiverr.com/s/7YBL22L" target="_blank" rel="noreferrer" ref={addToRefs} className="link"><FiverrSvg/></a>
+                                    <a href="https://www.fiverr.com/s/7YBL22L" target="_blank" rel="noreferrer" ref={addToRefs} className="menu__icon-link link"><FiverrSvg/></a>
                                 </li>
                             </ul>
                         </div>
-                        <div className="menu__contacts-email"><a href="mailto:tetianaivy@gmail.com" ref={addToRefs} className="link">tetianaivy@gmail.com</a></div>
+                        <div className="menu__contacts-email">Inquiries - <a href="mailto:tetianaivy@gmail.com" ref={addToRefs} className="menu__link--email link">tetianaivy@gmail.com</a></div>
                     </div>
                 </div>
             </div>
