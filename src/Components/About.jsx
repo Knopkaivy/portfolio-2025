@@ -11,27 +11,44 @@ function About() {
 
     useLayoutEffect(()=>{
         const ctx = gsap.context(()=>{
+            const mm = gsap.matchMedia();
 
-            gsap.to(aboutImgRef.current,{
-                scale: .7,
-                transformOrigin: '0% 100%',
-                scrollTrigger: {
-                    trigger: aboutRef.current,
-                    start: 'top 0%',
-                    end: 'bottom 100%',
-                    scrub: 1
-                }
-            });
+            mm.add("(min-width: 1024px)", () =>{
+                gsap.to(aboutContentRef.current, {
+                    yPercent: -10,
+                    scrollTrigger: {
+                        trigger: aboutRef.current,
+                        start: 'top 0%',
+                        end: 'bottom 100%',
+                        scrub: 1
+                    }
+                });
+                
+                gsap.to(aboutImgRef.current,{
+                    scale: .7,
+                    transformOrigin: '0% 100%',
+                    scrollTrigger: {
+                        trigger: aboutRef.current,
+                        start: 'top 0%',
+                        end: 'bottom 100%',
+                        scrub: 1
+                    }
+                });
+            })
 
-            gsap.to(aboutContentRef.current, {
-                y: -300,
-                scrollTrigger: {
-                    trigger: aboutRef.current,
-                    start: 'top 0%',
-                    end: 'bottom 100%',
-                    scrub: 1
-                }
-            });
+            mm.add("(max-width: 1023px)", () =>{
+                gsap.from(aboutContentRef.current, {
+                    y: 150,
+                    scrollTrigger: {
+                        trigger: aboutRef.current,
+                        start: 'top 100%',
+                        end: 'bottom 75%',
+                        scrub: 1
+                    }
+                });
+            })
+
+
         }, aboutRef);
         return () => ctx.revert();
     }, []);

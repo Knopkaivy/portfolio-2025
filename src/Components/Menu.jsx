@@ -28,18 +28,35 @@ function Menu() {
 
     useLayoutEffect(()=>{
         const ctx = gsap.context(()=>{
-
-            gsap.from(menuRef.current, {
-                scale: 0,
-                transformOrigin: 'center center',
-                opacity: 0,
-                scrollTrigger: {
-                    trigger: 'body',
-                    start: 'top -8%',
-                    duration: .5,
-                    toggleActions: 'play none play reverse'
-                }
+            const mm = gsap.matchMedia();
+            mm.add("(min-width: 768px)", () =>{
+                gsap.from(menuRef.current, {
+                    scale: 0,
+                    transformOrigin: 'center center',
+                    opacity: 0,
+                    scrollTrigger: {
+                        trigger: 'body',
+                        start: 'top -8%',
+                        duration: .5,
+                        toggleActions: 'play none play reverse'
+                    }
+                })
             })
+
+            mm.add("(max-width: 767px)", () =>{
+                gsap.from(menuRef.current, {
+                    scale: 0,
+                    transformOrigin: 'center center',
+                    opacity: 0,
+                    scrollTrigger: {
+                        trigger: 'body',
+                        start: 'top 10%',
+                        duration: .5,
+                        toggleActions: 'play none none none'
+                    }
+                })
+            })
+
 
             const tl = gsap.timeline({
                 paused: true, 

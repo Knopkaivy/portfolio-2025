@@ -1,11 +1,13 @@
 .navsection{
     position: absolute;
-    top: 4rem;
-    right: 10rem;
+    top: 0;
+    right: 0;
+    padding: 4rem $side-padding-desktop;
     z-index: 4;
 
     &__list{
         list-style: none;
+        padding: 0;
         display: flex;
         gap: 10rem;
 
@@ -26,4 +28,30 @@
             }
         }
     }
+}
+
+@media (max-width: $breakpoint-laptop){
+    .navsection{
+        padding-left: $side-padding-laptop;
+        padding-right: $side-padding-laptop;
+    }
+}
+
+@media (max-width: $breakpoint-tablet){
+    .navsection{
+        width: 100%;
+
+        &__list{
+            justify-content: space-evenly;
+            &-item a{
+                font-size: 2rem;
+            }
+        }
+    }
+}
+
+@media (max-width: $breakpoint-mobile){
+    .navsection{
+        display: none;
+    }   
 }

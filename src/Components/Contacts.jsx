@@ -23,7 +23,7 @@ function Contacts() {
                 stagger: .2,
                 scrollTrigger: {
                     trigger: contactsRef.current,
-                    start: 'top 80%',
+                    start: 'top 90%',
                     toggleActions: 'play none none none',
                 }
             });

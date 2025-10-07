@@ -19,7 +19,7 @@
         left: 0;
         width: 100%;
         height: 100%;
-        padding: 7rem 10rem;
+        padding: 7rem $side-padding-desktop;
         display: flex;
         flex-direction: column;
         align-items: end;
@@ -41,13 +41,14 @@
             align-items: end;
             justify-content: end;
             gap: 6rem;
-            padding-right: 10rem;
+            padding-left: $side-padding-desktop;
+            padding-right: $side-padding-desktop;
             padding-bottom: 42vh;
         }
     }
 
     h1{
-        font-size: 18rem;
+        font-size: 9vw;
         margin: 0;
         letter-spacing: -.25rem;
         font-family: $font-family-primary;
@@ -57,11 +58,105 @@
 
     p{
         font-size: 2rem;
+        line-height: 1.6;
         text-align: end;
+        margin: 0;
     }
 
     &__name{
         font-size: 7.5rem;
         color: $color-red;
+    }
+}
+
+@media (max-width: $breakpoint-laptop){
+    .hero{
+
+        &__overlay{
+            padding-left: $side-padding-laptop;
+            padding-right: $side-padding-laptop;
+
+            &--transparent{
+                gap: 4rem;
+                padding-left: $side-padding-laptop;
+                padding-right: $side-padding-laptop;
+                padding-bottom: 24rem;
+            }
+        }
+    }
+}
+
+@media (max-width: $breakpoint-tablet){
+    .hero{
+        &__overlay{
+            padding-top: 10rem;
+            padding-bottom: 10rem;
+
+            &--transparent{
+                gap: 4rem;
+                padding-right: $side-padding-laptop;
+                padding-bottom: 24rem;
+            }
+        }
+
+        h1{
+            text-align: end;
+        }
+
+        p{
+            font-size: 1.8rem;
+        }
+
+        &__name{
+            font-size: 6rem;
+        }
+    }
+}
+
+@media (max-width: $breakpoint-mobile){
+    .hero{
+
+        &__overlay{
+            padding-left: $side-padding-mobile;
+            padding-right: $side-padding-mobile;
+
+            &--transparent{
+                gap: 4rem;
+                padding-right: $side-padding-mobile;
+                padding-bottom: 24rem;
+            }
+        }
+
+        h1{
+            font-size: 9.5vw;
+        }
+
+        &__name{
+            font-size: 4.5rem;
+        }
+    }
+}
+
+@media (max-width: $breakpoint-mobile-xs){
+    .hero{
+
+        &__overlay{
+            padding-left: $side-padding-mobile-xs;
+            padding-right: $side-padding-mobile-xs;
+
+            &--transparent{
+                gap: 4rem;
+                padding-right: $side-padding-mobile-xs;
+                padding-bottom: 24rem;
+            }
+        }
+
+        h1{
+            font-size: 10vw;
+        }
+
+        &__name{
+            font-size: 3.5rem;
+        }
     }
 }

@@ -2,7 +2,7 @@ import { useRef, forwardRef,useImperativeHandle,  useLayoutEffect } from "react"
 import gsap from "gsap"
 import '../Styles/Project.scss'
 
-const Project = forwardRef(({imgSrc, name, url, ind}, ref) => {
+const Project = forwardRef(({imgSrcDesktop, imgSrcTablet, imgSrcLaptop, imgSrcMobile, imgSrcMobileXS, name, url, ind}, ref) => {
     const projectRef = useRef(null);
     const projectImageOverlayRef = useRef(null);
     const projectLinkRef = useRef(null);
@@ -31,6 +31,7 @@ const Project = forwardRef(({imgSrc, name, url, ind}, ref) => {
 
                 gsap.to(projectImageOverlayRef.current,{
                     opacity: .5,
+                    ease: "sine.in",
                     scrollTrigger: {
                         trigger: projectRef.current,
                         start: 'top 100%',
@@ -47,7 +48,13 @@ const Project = forwardRef(({imgSrc, name, url, ind}, ref) => {
         <div ref={projectRef} className="project" style={{zIndex: ind}} >
             <div className="project__image-container">
                 <div ref={projectImageOverlayRef} className="project__image-overlay"></div>
-                <img src={imgSrc} aria-hidden='true' className="project__image" />
+                <picture>
+                    <source media="(max-width: 450px)" srcSet={imgSrcMobileXS} />
+                    <source media="(max-width: 767px)" srcSet={imgSrcMobile} />
+                    <source media="(max-width: 1023px)" srcSet={imgSrcTablet} />
+                    <source media="(max-width: 1439px)" srcSet={imgSrcLaptop} />
+                    <img src={imgSrcDesktop} aria-hidden='true' className="project__image" />
+                </picture>
             </div>
             <div className="project__content-container">
                 <div ref={projectLinkRef} className="project__link-container">

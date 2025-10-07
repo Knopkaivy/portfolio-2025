@@ -19,3 +19,42 @@
         gap: 10rem;
     }
 }
+
+@media (max-width: $breakpoint-laptop){
+    .see-more{
+        padding: $side-padding-laptop;
+    }
+}
+
+@media (max-width: $breakpoint-tablet){
+    .see-more{
+        gap: 0;
+        justify-content: space-between;
+        font-size: 1.8rem;
+
+        &__title{
+            text-align: start;
+        }
+    }
+}
+
+@media (max-width: $breakpoint-mobile){
+    .see-more{
+        padding-left: $side-padding-mobile;
+        padding-right: $side-padding-mobile;
+        flex-direction: column;
+        align-items: start;
+        gap: 4rem;
+
+        &__links-container{
+            gap: 5rem;
+        }
+    }
+}
+
+@media (max-width: $breakpoint-mobile-xs){
+    .see-more{
+        padding-left: $side-padding-mobile-xs;
+        padding-right: $side-padding-mobile-xs;
+    }
+}

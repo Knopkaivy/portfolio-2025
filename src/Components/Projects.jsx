@@ -6,10 +6,43 @@ import '../Styles/Projects.scss'
 
 function Projects() {
     const projectListArray = [
-        {imgSrc: ProjectImagesArray[0].image, name: 'Beauty Salon Landing Page', url: 'https://beauty-salon-landing-demo.web.app/'},
-        {imgSrc: ProjectImagesArray[1].image, name: 'Hotel Landing Page', url: 'https://borgo-santandrea-home-demo.web.app/'},
-        {imgSrc: ProjectImagesArray[2].image, name: 'Photographer Portfolio', url: 'https://photographer-portfolio-demo.web.app/'},
-        {imgSrc: ProjectImagesArray[3].image, name: 'Real Estate Listing', url: 'https://real-estate-landing-demo.web.app/'},
+        {
+            imgSrcMobileXS: ProjectImagesArray[0].imageMobileXS, 
+            imgSrcMobile: ProjectImagesArray[0].imageMobile, 
+            imgSrcTablet: ProjectImagesArray[0].imageTablet, 
+            imgSrcLaptop: ProjectImagesArray[0].imageLaptop, 
+            imgSrcDesktop: ProjectImagesArray[0].imageDesktop, 
+            name: 'Beauty Salon Landing Page', 
+            url: 'https://beauty-salon-landing-demo.web.app/'
+        },
+        {
+            imgSrcMobileXS: ProjectImagesArray[1].imageMobileXS, 
+            imgSrcMobile: ProjectImagesArray[1].imageMobile, 
+            imgSrcTablet: ProjectImagesArray[1].imageTablet, 
+            imgSrcLaptop: ProjectImagesArray[1].imageLaptop, 
+            imgSrcDesktop: ProjectImagesArray[1].imageDesktop, 
+            name: 'Hotel Landing Page', 
+            url: 'https://borgo-santandrea-home-demo.web.app/'
+        },
+        {
+            imgSrcMobileXS: ProjectImagesArray[2].imageMobileXS, 
+            imgSrcMobile: ProjectImagesArray[2].imageMobile, 
+            imgSrcTablet: ProjectImagesArray[2].imageTablet, 
+            imgSrcLaptop: ProjectImagesArray[2].imageLaptop, 
+            imgSrcDesktop: ProjectImagesArray[2].imageDesktop, 
+            name: 'Photographer Portfolio', 
+            url: 'https://photographer-portfolio-demo.web.app/'
+        },
+        {
+            imgSrcMobileXS: ProjectImagesArray[3].imageMobileXS, 
+            imgSrcMobile: ProjectImagesArray[3].imageMobile, 
+            imgSrcTablet: ProjectImagesArray[3].imageTablet, 
+            imgSrcLaptop: ProjectImagesArray[3].imageLaptop, 
+            imgSrcDesktop: ProjectImagesArray[3].imageDesktop, 
+            name: 'Real Estate Listing', 
+            url: 'https://real-estate-landing-demo.web.app/'
+
+        },
     ]
 
     const projectsContainerRef = useRef(null);
@@ -40,7 +73,8 @@ function Projects() {
                     }, '<')
                     .to(project.imageOverlay,{
                         opacity: .5,
-                        duration: .5
+                        duration: .5,
+                        ease: "sine.in"
                     }, '<');
                 }
             })
@@ -49,7 +83,19 @@ function Projects() {
     }, [projectListArray]);
 
     const projectList = projectListArray.map((project, i) =>{
-        return <Project key={i} imgSrc={project.imgSrc} name={project.name} url={project.url} ind={i} ref={(el) => (projectsRef.current[i] = el)} />
+        return <Project 
+        key={i} 
+        imgSrcMobileXS={project.imgSrcMobileXS} 
+        imgSrcMobile={project.imgSrcMobile} 
+        imgSrcTablet={project.imgSrcTablet} 
+        imgSrcLaptop={project.imgSrcLaptop} 
+        imgSrcDesktop={project.imgSrcDesktop} 
+        name={project.name} 
+        url={project.url} 
+        ind={i} 
+        ref={(el) => (projectsRef.current[i] = el)
+
+        } />
     })
 
     return (
