@@ -30,7 +30,7 @@ const Project = forwardRef(({imgSrcDesktop, imgSrcTablet, imgSrcLaptop, imgSrcMo
                 });
 
                 gsap.to(projectImageOverlayRef.current,{
-                    opacity: .5,
+                    opacity: .3,
                     ease: "sine.in",
                     scrollTrigger: {
                         trigger: projectRef.current,

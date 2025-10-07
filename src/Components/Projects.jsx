@@ -72,7 +72,7 @@ function Projects() {
                         duration: .5
                     }, '<')
                     .to(project.imageOverlay,{
-                        opacity: .5,
+                        opacity: .3,
                         duration: .5,
                         ease: "sine.in"
                     }, '<');
