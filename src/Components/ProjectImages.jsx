@@ -33,14 +33,6 @@ const ProjectImagesArray = [
     },
     {
         id: 2, 
-        imageMobileXS: HotelLandingPageMobileXS,
-        imageMobile: HotelLandingPageMobile,
-        imageTablet: HotelLandingPageTablet, 
-        imageLaptop: HotelLandingPageLaptop, 
-        imageDesktop: HotelLandingPageDesktop, 
-    },
-    {
-        id: 3, 
         imageMobileXS: PhotographerPortfolioMobileXS,
         imageMobile: PhotographerPortfolioMobile,
         imageTablet: PhotographerPortfolioTablet, 
@@ -48,12 +40,20 @@ const ProjectImagesArray = [
         imageDesktop: PhotographerPortfolioDesktop, 
     },
     {
-        id: 4, 
+        id: 3, 
         imageMobileXS: RealEstateListingMobileXS,
         imageMobile: RealEstateListingMobile,
         imageTablet: RealEstateListingTablet, 
         imageLaptop: RealEstateListingLaptop, 
         imageDesktop: RealEstateListingDesktop, 
+    },
+    {
+        id: 4, 
+        imageMobileXS: HotelLandingPageMobileXS,
+        imageMobile: HotelLandingPageMobile,
+        imageTablet: HotelLandingPageTablet, 
+        imageLaptop: HotelLandingPageLaptop, 
+        imageDesktop: HotelLandingPageDesktop, 
     },
 ]
 

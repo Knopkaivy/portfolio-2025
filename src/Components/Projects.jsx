@@ -12,7 +12,7 @@ function Projects() {
             imgSrcTablet: ProjectImagesArray[0].imageTablet, 
             imgSrcLaptop: ProjectImagesArray[0].imageLaptop, 
             imgSrcDesktop: ProjectImagesArray[0].imageDesktop, 
-            name: 'Beauty Salon Landing Page', 
+            name: 'Business Landing Page', 
             url: 'https://beauty-salon-landing-demo.web.app/'
         },
         {
@@ -21,8 +21,8 @@ function Projects() {
             imgSrcTablet: ProjectImagesArray[1].imageTablet, 
             imgSrcLaptop: ProjectImagesArray[1].imageLaptop, 
             imgSrcDesktop: ProjectImagesArray[1].imageDesktop, 
-            name: 'Hotel Landing Page', 
-            url: 'https://borgo-santandrea-home-demo.web.app/'
+            name: 'Artist Portfolio', 
+            url: 'https://photographer-portfolio-demo.web.app/'
         },
         {
             imgSrcMobileXS: ProjectImagesArray[2].imageMobileXS, 
@@ -30,8 +30,8 @@ function Projects() {
             imgSrcTablet: ProjectImagesArray[2].imageTablet, 
             imgSrcLaptop: ProjectImagesArray[2].imageLaptop, 
             imgSrcDesktop: ProjectImagesArray[2].imageDesktop, 
-            name: 'Photographer Portfolio', 
-            url: 'https://photographer-portfolio-demo.web.app/'
+            name: 'Real Estate Listing', 
+            url: 'https://real-estate-landing-demo.web.app/'
         },
         {
             imgSrcMobileXS: ProjectImagesArray[3].imageMobileXS, 
@@ -39,8 +39,8 @@ function Projects() {
             imgSrcTablet: ProjectImagesArray[3].imageTablet, 
             imgSrcLaptop: ProjectImagesArray[3].imageLaptop, 
             imgSrcDesktop: ProjectImagesArray[3].imageDesktop, 
-            name: 'Real Estate Listing', 
-            url: 'https://real-estate-landing-demo.web.app/'
+            name: 'Hotel Landing Page', 
+            url: 'https://borgo-santandrea-home-demo.web.app/'
 
         },
     ]
