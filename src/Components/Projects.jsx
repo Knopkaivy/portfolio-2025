@@ -43,6 +43,16 @@ function Projects() {
             url: 'https://borgo-santandrea-home-demo.web.app/'
 
         },
+        {
+            imgSrcMobileXS: ProjectImagesArray[4].imageMobileXS, 
+            imgSrcMobile: ProjectImagesArray[4].imageMobile, 
+            imgSrcTablet: ProjectImagesArray[4].imageTablet, 
+            imgSrcLaptop: ProjectImagesArray[4].imageLaptop, 
+            imgSrcDesktop: ProjectImagesArray[4].imageDesktop, 
+            name: 'Financial Calculators', 
+            url: 'https://interest-lab.web.app/'
+
+        },
     ]
 
     const projectsContainerRef = useRef(null);

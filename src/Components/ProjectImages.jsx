@@ -22,6 +22,12 @@ import RealEstateListingTablet from '../assets/Images/ProjectImages/realEstateLi
 import RealEstateListingLaptop from '../assets/Images/ProjectImages/realEstateListingLaptop.webp';
 import RealEstateListingDesktop from '../assets/Images/ProjectImages/realEstateListingDesktop.webp';
 
+import InterestLabMobileXS from '../assets/Images/ProjectImages/InterestLabMobileXS.webp';
+import InterestLabMobile from '../assets/Images/ProjectImages/InterestLabMobile.webp';
+import InterestLabTablet from '../assets/Images/ProjectImages/InterestLabTablet.webp';
+import InterestLabLaptop from '../assets/Images/ProjectImages/InterestLabLaptop.webp';
+import InterestLabDesktop from '../assets/Images/ProjectImages/InterestLabDesktop.webp';
+
 const ProjectImagesArray = [
     {
         id: 1, 
@@ -54,6 +60,14 @@ const ProjectImagesArray = [
         imageTablet: HotelLandingPageTablet, 
         imageLaptop: HotelLandingPageLaptop, 
         imageDesktop: HotelLandingPageDesktop, 
+    },
+    {
+        id: 5, 
+        imageMobileXS: InterestLabMobileXS,
+        imageMobile: InterestLabMobile,
+        imageTablet: InterestLabTablet, 
+        imageLaptop: InterestLabLaptop, 
+        imageDesktop: InterestLabDesktop, 
     },
 ]
 
