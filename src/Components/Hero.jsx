@@ -44,7 +44,7 @@ function Hero() {
             <div className="hero__bg-container">
             </div>
             <div className="hero__overlay">
-                <h1 ref={heroHeadingRef}>UI Developer</h1>
+                <h1 ref={heroHeadingRef}>Front End Engineer</h1>
             </div>
             <NavSection/>
             <div className="hero__overlay--transparent">
