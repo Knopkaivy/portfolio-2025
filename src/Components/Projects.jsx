@@ -49,8 +49,18 @@ function Projects() {
             imgSrcTablet: ProjectImagesArray[4].imageTablet, 
             imgSrcLaptop: ProjectImagesArray[4].imageLaptop, 
             imgSrcDesktop: ProjectImagesArray[4].imageDesktop, 
-            name: 'Financial Calculators', 
+            name: 'Financial Calculator', 
             url: 'https://interest-lab.web.app/'
+
+        },
+        {
+            imgSrcMobileXS: ProjectImagesArray[5].imageMobileXS, 
+            imgSrcMobile: ProjectImagesArray[5].imageMobile, 
+            imgSrcTablet: ProjectImagesArray[5].imageTablet, 
+            imgSrcLaptop: ProjectImagesArray[5].imageLaptop, 
+            imgSrcDesktop: ProjectImagesArray[5].imageDesktop, 
+            name: 'AI Travel Planner', 
+            url: 'https://road-trip-planner-teal.vercel.app/'
 
         },
     ]

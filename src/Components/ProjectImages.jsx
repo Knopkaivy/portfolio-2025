@@ -28,6 +28,12 @@ import InterestLabTablet from '../assets/Images/ProjectImages/InterestLabTablet.
 import InterestLabLaptop from '../assets/Images/ProjectImages/InterestLabLaptop.webp';
 import InterestLabDesktop from '../assets/Images/ProjectImages/InterestLabDesktop.webp';
 
+import RoadTripPlannerMobileXS from '../assets/Images/ProjectImages/RoadTripPlannerMobileXS.webp';
+import RoadTripPlannerMobile from '../assets/Images/ProjectImages/RoadTripPlannerMobile.webp';
+import RoadTripPlannerTablet from '../assets/Images/ProjectImages/RoadTripPlannerTablet.webp';
+import RoadTripPlannerLaptop from '../assets/Images/ProjectImages/RoadTripPlannerLaptop.webp';
+import RoadTripPlannerDesktop from '../assets/Images/ProjectImages/RoadTripPlannerDesktop.webp';
+
 const ProjectImagesArray = [
     {
         id: 1, 
@@ -68,6 +74,14 @@ const ProjectImagesArray = [
         imageTablet: InterestLabTablet, 
         imageLaptop: InterestLabLaptop, 
         imageDesktop: InterestLabDesktop, 
+    },
+    {
+        id: 6, 
+        imageMobileXS: RoadTripPlannerMobileXS,
+        imageMobile: RoadTripPlannerMobile,
+        imageTablet: RoadTripPlannerTablet, 
+        imageLaptop: RoadTripPlannerLaptop, 
+        imageDesktop: RoadTripPlannerDesktop, 
     },
 ]
 
