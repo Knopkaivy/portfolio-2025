@@ -7,13 +7,53 @@ import '../Styles/Projects.scss'
 function Projects() {
     const projectListArray = [
         {
-            imgSrcMobileXS: ProjectImagesArray[0].imageMobileXS, 
-            imgSrcMobile: ProjectImagesArray[0].imageMobile, 
-            imgSrcTablet: ProjectImagesArray[0].imageTablet, 
-            imgSrcLaptop: ProjectImagesArray[0].imageLaptop, 
-            imgSrcDesktop: ProjectImagesArray[0].imageDesktop, 
+            imgSrcMobileXS: ProjectImagesArray[6].imageMobileXS, 
+            imgSrcMobile: ProjectImagesArray[6].imageMobile, 
+            imgSrcTablet: ProjectImagesArray[6].imageTablet, 
+            imgSrcLaptop: ProjectImagesArray[6].imageLaptop, 
+            imgSrcDesktop: ProjectImagesArray[6].imageDesktop, 
+            name: 'E-commerce', 
+            url: 'https://national-parks-posters.vercel.app/'
+
+        },
+        {
+            imgSrcMobileXS: ProjectImagesArray[4].imageMobileXS, 
+            imgSrcMobile: ProjectImagesArray[4].imageMobile, 
+            imgSrcTablet: ProjectImagesArray[4].imageTablet, 
+            imgSrcLaptop: ProjectImagesArray[4].imageLaptop, 
+            imgSrcDesktop: ProjectImagesArray[4].imageDesktop, 
+            name: 'Financial Tools & Dataviz', 
+            url: 'https://interest-lab.web.app/'
+
+        },
+        {
+            imgSrcMobileXS: ProjectImagesArray[5].imageMobileXS, 
+            imgSrcMobile: ProjectImagesArray[5].imageMobile, 
+            imgSrcTablet: ProjectImagesArray[5].imageTablet, 
+            imgSrcLaptop: ProjectImagesArray[5].imageLaptop, 
+            imgSrcDesktop: ProjectImagesArray[5].imageDesktop, 
+            name: 'AI Integration & Mapping', 
+            url: 'https://road-trip-planner-teal.vercel.app/'
+
+        },
+        // {
+        //     imgSrcMobileXS: ProjectImagesArray[0].imageMobileXS, 
+        //     imgSrcMobile: ProjectImagesArray[0].imageMobile, 
+        //     imgSrcTablet: ProjectImagesArray[0].imageTablet, 
+        //     imgSrcLaptop: ProjectImagesArray[0].imageLaptop, 
+        //     imgSrcDesktop: ProjectImagesArray[0].imageDesktop, 
+        //     name: 'Business Landing Page', 
+        //     url: 'https://beauty-salon-landing-demo.web.app/'
+        // },
+        {
+            imgSrcMobileXS: ProjectImagesArray[3].imageMobileXS, 
+            imgSrcMobile: ProjectImagesArray[3].imageMobile, 
+            imgSrcTablet: ProjectImagesArray[3].imageTablet, 
+            imgSrcLaptop: ProjectImagesArray[3].imageLaptop, 
+            imgSrcDesktop: ProjectImagesArray[3].imageDesktop, 
             name: 'Business Landing Page', 
-            url: 'https://beauty-salon-landing-demo.web.app/'
+            url: 'https://borgo-santandrea-home-demo.web.app/'
+
         },
         {
             imgSrcMobileXS: ProjectImagesArray[1].imageMobileXS, 
@@ -33,36 +73,7 @@ function Projects() {
             name: 'Real Estate Listing', 
             url: 'https://real-estate-landing-demo.web.app/'
         },
-        {
-            imgSrcMobileXS: ProjectImagesArray[3].imageMobileXS, 
-            imgSrcMobile: ProjectImagesArray[3].imageMobile, 
-            imgSrcTablet: ProjectImagesArray[3].imageTablet, 
-            imgSrcLaptop: ProjectImagesArray[3].imageLaptop, 
-            imgSrcDesktop: ProjectImagesArray[3].imageDesktop, 
-            name: 'Hotel Landing Page', 
-            url: 'https://borgo-santandrea-home-demo.web.app/'
 
-        },
-        {
-            imgSrcMobileXS: ProjectImagesArray[4].imageMobileXS, 
-            imgSrcMobile: ProjectImagesArray[4].imageMobile, 
-            imgSrcTablet: ProjectImagesArray[4].imageTablet, 
-            imgSrcLaptop: ProjectImagesArray[4].imageLaptop, 
-            imgSrcDesktop: ProjectImagesArray[4].imageDesktop, 
-            name: 'Financial Calculator', 
-            url: 'https://interest-lab.web.app/'
-
-        },
-        {
-            imgSrcMobileXS: ProjectImagesArray[5].imageMobileXS, 
-            imgSrcMobile: ProjectImagesArray[5].imageMobile, 
-            imgSrcTablet: ProjectImagesArray[5].imageTablet, 
-            imgSrcLaptop: ProjectImagesArray[5].imageLaptop, 
-            imgSrcDesktop: ProjectImagesArray[5].imageDesktop, 
-            name: 'AI Travel Planner', 
-            url: 'https://road-trip-planner-teal.vercel.app/'
-
-        },
     ]
 
     const projectsContainerRef = useRef(null);

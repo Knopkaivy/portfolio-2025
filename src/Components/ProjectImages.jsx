@@ -34,6 +34,12 @@ import RoadTripPlannerTablet from '../assets/Images/ProjectImages/RoadTripPlanne
 import RoadTripPlannerLaptop from '../assets/Images/ProjectImages/RoadTripPlannerLaptop.webp';
 import RoadTripPlannerDesktop from '../assets/Images/ProjectImages/RoadTripPlannerDesktop.webp';
 
+import NationalParksPrintsMobileXS from '../assets/Images/ProjectImages/NationalParksPrintsMobileXS.webp';
+import NationalParksPrintsMobile from '../assets/Images/ProjectImages/NationalParksPrintsMobile.webp';
+import NationalParksPrintsTablet from '../assets/Images/ProjectImages/NationalParksPrintsTablet.webp';
+import NationalParksPrintsLaptop from '../assets/Images/ProjectImages/NationalParksPrintsLaptop.webp';
+import NationalParksPrintsDesktop from '../assets/Images/ProjectImages/NationalParksPrintsDesktop.webp';
+
 const ProjectImagesArray = [
     {
         id: 1, 
@@ -82,6 +88,14 @@ const ProjectImagesArray = [
         imageTablet: RoadTripPlannerTablet, 
         imageLaptop: RoadTripPlannerLaptop, 
         imageDesktop: RoadTripPlannerDesktop, 
+    },
+    {
+        id: 7, 
+        imageMobileXS: NationalParksPrintsMobileXS,
+        imageMobile: NationalParksPrintsMobile,
+        imageTablet: NationalParksPrintsTablet, 
+        imageLaptop: NationalParksPrintsLaptop, 
+        imageDesktop: NationalParksPrintsDesktop, 
     },
 ]
 
